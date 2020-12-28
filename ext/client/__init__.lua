@@ -12,7 +12,7 @@ end)
 --at the end (when spawn screen shows)
 Events:Subscribe('Player:Connected', function(player)
     WebUI:ExecuteJS('hideLoadingScreen()')
-    --WebUI:Hide()
+    WebUI:Hide()
 end)
 
 --will be used to hide the loading screen
@@ -21,7 +21,7 @@ Events:Subscribe('Level:LoadingInfo', function(screenInfo)
 end)
 
 function recieveData(data)
-    WebUI:ExecuteJS('updateServerHeader(' .. data .. ')')
+    WebUI:ExecuteJS('initialize(' .. data .. ')')
 end
 
 --install a hook for the PushScreen
