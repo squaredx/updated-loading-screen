@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "bffont";
+    src: url("bffont.ttf");
+}
+
+#screen {
+    background-color: black;
+    font-family: bffont;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.bg-image {
+    /*background-image: url(fb://Levels/XP1_004/UI/XP1_004_Level);*/
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(15px);
+    transform: scale(1.03);
+}
