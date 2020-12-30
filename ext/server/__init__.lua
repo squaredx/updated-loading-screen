@@ -1,7 +1,10 @@
 Events:Subscribe('Player:Authenticated', function(player)
+
     local serverHeader ={
-        levelname = SharedUtils:GetLevelName(),
+        level = SharedUtils:GetLevelName(),
         gamemode = SharedUtils:GetCurrentGameMode(),
+        name = RCON:SendCommand('vars.serverName')[2],
+        description = CON:SendCommand('vars.serverDescription')[2]
     }
     local json = json.encode(serverHeader);
 

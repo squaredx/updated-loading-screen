@@ -26,13 +26,15 @@ function drawCanvas() {
 //TEST CONSOLE: initialize({levelname:'Levels/MP_Subway/MP_Subway', gamemode:'ConquestLarge0'});
 function initialize(data) {
 
-    const [mapName, mapImage] = parseMap(data.levelname);
-    const fbLevel = data.levelname.split('/').pop();
+    const [mapName, mapImage] = parseMap(data.level);
+    const fbLevel = data.level.split('/').pop();
 
     bgImage = 'fb://Levels/' + fbLevel + mapImage
 
     document.getElementById("map").innerHTML = mapName;
     document.getElementById("gamemode").innerHTML = parseGameMode(data.gamemode);
+    document.getElementById("name").innerHTML = data.name;
+    document.getElementById("description").innerHTML = data.description;
 
     resizeCanvas();
 }
