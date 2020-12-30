@@ -4,7 +4,7 @@ var context = canvas.getContext('2d');
 window.addEventListener('resize', resizeCanvas, false);
 
 var bgImage = '';
-
+//initialize({level: 'Levels/MP_Subway/MP_Subway', gamemode: 'ConquestLarge0', name: 'test srv', description: 'test'});
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
@@ -30,6 +30,7 @@ function initialize(data) {
     const fbLevel = data.level.split('/').pop();
 
     bgImage = 'fb://Levels/' + fbLevel + mapImage
+    //bgImage = 'download.png'; //test image
 
     document.getElementById("map").innerHTML = mapName;
     document.getElementById("gamemode").innerHTML = parseGameMode(data.gamemode);
